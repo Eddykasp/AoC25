@@ -23,6 +23,8 @@ def analyse_row(manifold_row, beam_indices):
             split_counter += 1
             output_indices.append(i - 1)
             output_indices.append(i + 1)
+        elif char == '.' and i in beam_indices:
+            output_indices.append(i)
     return output_indices
 
 if __name__ == "__main__":
